@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
+		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
+		768CC619291BFCB100C98183 /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC618291BFCB100C98183 /* TestTextField.swift */; };
+		768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 768CC61B291C6FCE00C98183 /* BSLogger */; };
+		768CC61F291C71D500C98183 /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC61E291C71D500C98183 /* DarkTextField.swift */; };
 		76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A0291BFBA2005AC48A /* demoApp.swift */; };
 		76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A2291BFBA2005AC48A /* ContentView.swift */; };
 		76C8A0A5291BFBA6005AC48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C8A0A4291BFBA6005AC48A /* Assets.xcassets */; };
@@ -14,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		768CC613291BFC4E00C98183 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		768CC615291BFC5500C98183 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		768CC618291BFCB100C98183 /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
+		768CC61E291C71D500C98183 /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		76C8A09D291BFBA2005AC48A /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8A0A0291BFBA2005AC48A /* demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoApp.swift; sourceTree = "<group>"; };
 		76C8A0A2291BFBA2005AC48A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768CC617291BFC9E00C98183 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				768CC618291BFCB100C98183 /* TestTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		768CC61D291C71C500C98183 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				768CC61E291C71D500C98183 /* DarkTextField.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		76C8A094291BFBA2005AC48A = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +77,10 @@
 		76C8A09F291BFBA2005AC48A /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				76C8A0A0291BFBA2005AC48A /* demoApp.swift */,
-				76C8A0A2291BFBA2005AC48A /* ContentView.swift */,
-				76C8A0A4291BFBA6005AC48A /* Assets.xcassets */,
+				768CC61D291C71C500C98183 /* Modifiers */,
+				768CC617291BFC9E00C98183 /* Components */,
+				76C8A0AF291BFBBD005AC48A /* Screens */,
+				76C8A0AE291BFBB2005AC48A /* Resources */,
 				76C8A0A6291BFBA6005AC48A /* Preview Content */,
 			);
 			path = demo;
@@ -65,6 +92,33 @@
 				76C8A0A7291BFBA6005AC48A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76C8A0AE291BFBB2005AC48A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76C8A0A0291BFBA2005AC48A /* demoApp.swift */,
+				76C8A0A2291BFBA2005AC48A /* ContentView.swift */,
+				76C8A0A4291BFBA6005AC48A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		76C8A0AF291BFBBD005AC48A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				76C8A0B0291BFBC7005AC48A /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		76C8A0B0291BFBC7005AC48A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				768CC613291BFC4E00C98183 /* HomeView.swift */,
+				768CC615291BFC5500C98183 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +137,9 @@
 			dependencies = (
 			);
 			name = demo;
+			packageProductDependencies = (
+				768CC61B291C6FCE00C98183 /* BSLogger */,
+			);
 			productName = demo;
 			productReference = 76C8A09D291BFBA2005AC48A /* demo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 76C8A094291BFBA2005AC48A;
+			packageReferences = (
+				768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */,
+			);
 			productRefGroup = 76C8A09E291BFBA2005AC48A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768CC614291BFC4E00C98183 /* HomeView.swift in Sources */,
 				76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */,
 				76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */,
+				768CC61F291C71D500C98183 /* DarkTextField.swift in Sources */,
+				768CC619291BFCB100C98183 /* TestTextField.swift in Sources */,
+				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taro.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -311,9 +378,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taro.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.com/bs-libraries/bs_logger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		768CC61B291C6FCE00C98183 /* BSLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */;
+			productName = BSLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76C8A095291BFBA2005AC48A /* Project object */;
 }

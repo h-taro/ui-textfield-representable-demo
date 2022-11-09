@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "bs_logger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.com/bs-libraries/bs_logger",
+      "state" : {
+        "revision" : "a519b5ea97678173251f3bd80061c4274e47f6dc",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
