@@ -12,9 +12,7 @@
 		7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF66291E522300D10CC6 /* UIApplication+.swift */; };
 		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
 		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
-		768CC619291BFCB100C98183 /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC618291BFCB100C98183 /* TestTextField.swift */; };
 		768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 768CC61B291C6FCE00C98183 /* BSLogger */; };
-		768CC61F291C71D500C98183 /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC61E291C71D500C98183 /* DarkTextField.swift */; };
 		76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A0291BFBA2005AC48A /* demoApp.swift */; };
 		76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A2291BFBA2005AC48A /* ContentView.swift */; };
 		76C8A0A5291BFBA6005AC48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C8A0A4291BFBA6005AC48A /* Assets.xcassets */; };
@@ -27,8 +25,6 @@
 		7678DF66291E522300D10CC6 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		768CC613291BFC4E00C98183 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		768CC615291BFC5500C98183 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		768CC618291BFCB100C98183 /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
-		768CC61E291C71D500C98183 /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		76C8A09D291BFBA2005AC48A /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8A0A0291BFBA2005AC48A /* demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoApp.swift; sourceTree = "<group>"; };
 		76C8A0A2291BFBA2005AC48A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +47,6 @@
 		7678DF62291E50F600D10CC6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				768CC618291BFCB100C98183 /* TestTextField.swift */,
 				7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */,
 				7678DF63291E511000D10CC6 /* EmailTextField.swift */,
 			);
@@ -74,14 +69,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		768CC61D291C71C500C98183 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				768CC61E291C71D500C98183 /* DarkTextField.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		76C8A094291BFBA2005AC48A = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				7678DF65291E521300D10CC6 /* Extensions */,
-				768CC61D291C71C500C98183 /* Modifiers */,
 				768CC617291BFC9E00C98183 /* Components */,
 				76C8A0AF291BFBBD005AC48A /* Screens */,
 				76C8A0AE291BFBB2005AC48A /* Resources */,
@@ -226,10 +212,8 @@
 				768CC614291BFC4E00C98183 /* HomeView.swift in Sources */,
 				76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */,
 				76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */,
-				768CC61F291C71D500C98183 /* DarkTextField.swift in Sources */,
 				7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */,
 				7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */,
-				768CC619291BFCB100C98183 /* TestTextField.swift in Sources */,
 				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
