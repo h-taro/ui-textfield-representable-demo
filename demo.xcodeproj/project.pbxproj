@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */; };
+		7678DF64291E511000D10CC6 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF63291E511000D10CC6 /* EmailTextField.swift */; };
+		7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF66291E522300D10CC6 /* UIApplication+.swift */; };
 		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
 		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
 		768CC619291BFCB100C98183 /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC618291BFCB100C98183 /* TestTextField.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldRepresentable.swift; sourceTree = "<group>"; };
+		7678DF63291E511000D10CC6 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		7678DF66291E522300D10CC6 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		768CC613291BFC4E00C98183 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		768CC615291BFC5500C98183 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		768CC618291BFCB100C98183 /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
@@ -42,10 +48,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		768CC617291BFC9E00C98183 /* Components */ = {
+		7678DF62291E50F600D10CC6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
 				768CC618291BFCB100C98183 /* TestTextField.swift */,
+				7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */,
+				7678DF63291E511000D10CC6 /* EmailTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		7678DF65291E521300D10CC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7678DF66291E522300D10CC6 /* UIApplication+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		768CC617291BFC9E00C98183 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7678DF62291E50F600D10CC6 /* TextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -77,6 +101,7 @@
 		76C8A09F291BFBA2005AC48A /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				7678DF65291E521300D10CC6 /* Extensions */,
 				768CC61D291C71C500C98183 /* Modifiers */,
 				768CC617291BFC9E00C98183 /* Components */,
 				76C8A0AF291BFBBD005AC48A /* Screens */,
@@ -197,10 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7678DF64291E511000D10CC6 /* EmailTextField.swift in Sources */,
 				768CC614291BFC4E00C98183 /* HomeView.swift in Sources */,
 				76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */,
 				76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */,
 				768CC61F291C71D500C98183 /* DarkTextField.swift in Sources */,
+				7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */,
+				7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */,
 				768CC619291BFCB100C98183 /* TestTextField.swift in Sources */,
 				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
 			);
@@ -259,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -313,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
