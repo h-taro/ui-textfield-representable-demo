@@ -66,5 +66,67 @@ struct UITextFieldRepresentable: UIViewRepresentable {
         @objc func onTapDoneButton(_ button: UIBarButtonItem) {
             UIApplication.shared.endEditing()
         }
+        
+        /**
+         指定されたテキスト フィールドで編集を開始するかどうかをデリゲートに尋ねます。
+         */
+        func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+            BSLogger.debug("入力可能になる直前")
+            return true
+        }
+        
+        /**
+         指定されたテキスト フィールドで編集が開始されたときにデリゲートに通知します。
+         
+         */
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            BSLogger.debug("入力可能になった後")
+        }
+        
+        /**
+         指定されたテキスト フィールドでの編集を停止するかどうかをデリゲートに尋ねます。
+         */
+        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+            BSLogger.debug("キーボードが閉じる直前")
+            return true
+        }
+        
+        /**
+         指定されたテキスト フィールドの編集がいつ停止したか、および停止した理由をデリゲートに通知します。
+         */
+        func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+            BSLogger.debug(reason)
+        }
+        
+        /**
+         指定されたテキスト フィールドの編集が停止したときにデリゲートに通知します。
+         */
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            BSLogger.debug("キーボードが閉じた後")
+        }
+        
+        /**
+         テキスト フィールドの現在の内容を削除するかどうかをデリゲートに尋ねます。
+         */
+        func textFieldShouldClear(_ textField: UITextField) -> Bool {
+            BSLogger.debug("テキストがクリアされる直前")
+            return true
+        }
+        
+        /**
+         テキスト フィールドの [戻る] ボタンの押下を処理するかどうかをデリゲートに問い合わせます。
+         */
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            BSLogger.debug("Returnが押される直前")
+            return true
+        }
+        
+        /**
+         指定されたテキストを変更するかどうかデリゲートに尋ねます。
+         */
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            BSLogger.debug("テキストが編集される度")
+            return true
+        }
     }
 }
