@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76260B042921ED91004EBEA1 /* EmailTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76260B032921ED91004EBEA1 /* EmailTextFieldViewModel.swift */; };
 		7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */; };
 		7678DF64291E511000D10CC6 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF63291E511000D10CC6 /* EmailTextField.swift */; };
 		7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF66291E522300D10CC6 /* UIApplication+.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76260B032921ED91004EBEA1 /* EmailTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldViewModel.swift; sourceTree = "<group>"; };
 		7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldRepresentable.swift; sourceTree = "<group>"; };
 		7678DF63291E511000D10CC6 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		7678DF66291E522300D10CC6 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
@@ -46,12 +48,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76260B012921ED6A004EBEA1 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				7678DF63291E511000D10CC6 /* EmailTextField.swift */,
+				76260B032921ED91004EBEA1 /* EmailTextFieldViewModel.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		76260B022921ED74004EBEA1 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
 		7678DF62291E50F600D10CC6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				76260B022921ED74004EBEA1 /* Password */,
+				76260B012921ED6A004EBEA1 /* Email */,
 				7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */,
-				7678DF63291E511000D10CC6 /* EmailTextField.swift */,
-				7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 				7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */,
 				7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */,
 				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
+				76260B042921ED91004EBEA1 /* EmailTextFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

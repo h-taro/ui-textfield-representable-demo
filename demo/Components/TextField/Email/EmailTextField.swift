@@ -9,6 +9,8 @@ import SwiftUI
 
 // TODO: フォーカス時にスタイルを変更する
 struct EmailTextField: View {
+    @StateObject private var viewModel: EmailTextFieldViewModel = .init()
+
     private var text: Binding<String>
     private let placeholder: String
     
