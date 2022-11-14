@@ -27,7 +27,8 @@ struct PasswordTextField: View {
             text: password,
             isSecure: $isSecure,
             placeholder: placeholder,
-            keyboardType: .default
+            keyboardType: .default,
+            shouldChangeCharacterSubject: .init()
         )
         .padding()
         .background(

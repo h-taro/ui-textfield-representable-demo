@@ -19,7 +19,8 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 16) {
                 EmailTextField(
                     text: $viewModel.email,
-                    placeholder: "mail@example.com"
+                    placeholder: "mail@example.com",
+                    shouldChangeCharacterSubject: viewModel.shouldChangeCharacterSubject
                 )
                 
                 PasswordTextField(
