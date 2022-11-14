@@ -17,11 +17,7 @@ struct HomeView: View {
     private var contentView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: 16) {
-                EmailTextField(
-                    text: $viewModel.email,
-                    placeholder: "mail@example.com",
-                    shouldChangeCharacterSubject: viewModel.shouldChangeCharacterSubject
-                )
+                emailTextField
                 
                 PasswordTextField(
                     password: $viewModel.password,
@@ -41,6 +37,27 @@ struct HomeView: View {
                 }
             }
             .padding()
+        }
+    }
+    
+    private var emailTextField: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            EmailTextField(
+                text: $viewModel.email,
+                placeholder: "mail@example.com",
+                emailValidSubject: viewModel.emailValidSubject
+            )
+            
+            if viewModel.isShowErrorView {
+                HStack(alignment: .center, spacing: 4) {
+                    Image(systemName: "exclamationmark.circle")
+                    
+                    Text("エラーメッセージエラーメッセージエラーメッセージ")
+                        .font(.caption)
+                        .fontWeight(.regular)
+                }
+                .foregroundColor(.red.opacity(0.8))
+            }
         }
     }
 }

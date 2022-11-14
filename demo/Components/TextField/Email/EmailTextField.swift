@@ -10,20 +10,19 @@ import SwiftUI
 
 // TODO: フォーカス時にスタイルを変更する
 struct EmailTextField: View {
-    @StateObject private var viewModel: EmailTextFieldViewModel = .init()
+    @StateObject private var viewModel: EmailTextFieldViewModel
 
     private var text: Binding<String>
     private let placeholder: String
-    private let shouldChangeCharacterSubject: PassthroughSubject<Void, Never>
     
     init(
         text: Binding<String>,
         placeholder: String,
-        shouldChangeCharacterSubject: PassthroughSubject<Void, Never>
+        emailValidSubject: PassthroughSubject<Bool, Never>
     ) {
         self.text = text
         self.placeholder = placeholder
-        self.shouldChangeCharacterSubject = shouldChangeCharacterSubject
+        self._viewModel = .init(wrappedValue: .init(emailValidSubject: emailValidSubject))
     }
 
     var body: some View {
@@ -32,7 +31,7 @@ struct EmailTextField: View {
             isSecure: .constant(false),
             placeholder: placeholder,
             keyboardType: .emailAddress,
-            shouldChangeCharacterSubject: shouldChangeCharacterSubject
+            shouldChangeCharacterSubject: viewModel.shouldChangeCharacterSubject
         )
         .padding()
         .background(

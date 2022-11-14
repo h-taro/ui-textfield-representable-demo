@@ -15,14 +15,13 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
+    @Published private(set) var isShowErrorView = false
     
-    private(set) var shouldChangeCharacterSubject: PassthroughSubject<Void, Never> = .init()
+    private(set) var emailValidSubject: PassthroughSubject<Bool, Never> = .init()
     private var cancellables: Set<AnyCancellable> = []
     
-    private let emailPattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    
     init() {
-        subscribeShouldChangeCharacter()
+        subscribeEmailValid()
     }
     
     deinit {
@@ -30,42 +29,18 @@ class HomeViewModel: ObservableObject {
     }
     
     func onTapDone() {
-        do {
-            if try isValidEmail() {
-                BSLogger.debug("valid")
-            } else {
-                BSLogger.debug("invalid")
-            }
-        } catch {
-            BSLogger.error(error)
-        }
     }
 }
 
 // MARK: - PRIVATE METHODS
 extension HomeViewModel {
-    private func subscribeShouldChangeCharacter() {
-        shouldChangeCharacterSubject
+    private func subscribeEmailValid() {
+        emailValidSubject
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] valid in
                 guard let self = self else { return }
-                do {
-                    if try self.isValidEmail() {
-                        BSLogger.debug("valid")
-                    } else {
-                        BSLogger.debug("invalid")
-                    }
-                } catch {
-                    BSLogger.error(error)
-                }
+                self.isShowErrorView = !valid
             }
             .store(in: &cancellables)
-    }
-    
-    private func isValidEmail() throws -> Bool {
-        let regex = try NSRegularExpression(pattern: emailPattern)
-        
-        let result = regex.matches(in: email, range: NSMakeRange(.zero, email.count))
-        return result.count > 0
     }
 }

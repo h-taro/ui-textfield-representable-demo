@@ -16,14 +16,14 @@ struct UITextFieldRepresentable: UIViewRepresentable {
     private let placeholder: String
     private let keyboardType: UIKeyboardType
     
-    private let shouldChangeCharacterSubject: PassthroughSubject<Void, Never>
+    private let shouldChangeCharacterSubject: PassthroughSubject<String, Never>
     
     init(
         text: Binding<String>,
         isSecure: Binding<Bool>,
         placeholder: String,
         keyboardType: UIKeyboardType,
-        shouldChangeCharacterSubject: PassthroughSubject<Void, Never>
+        shouldChangeCharacterSubject: PassthroughSubject<String, Never>
     ) {
         self._text = text
         self._isSecure = isSecure
@@ -61,7 +61,6 @@ struct UITextFieldRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UITextField, context: Context) {
-        BSLogger.debug("update ui view")
         uiView.text = text
         uiView.isSecureTextEntry = isSecure
     }
@@ -134,14 +133,21 @@ struct UITextFieldRepresentable: UIViewRepresentable {
         /**
          指定されたテキストを変更するかどうかデリゲートに尋ねます。
          */
-        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        func textField(
+            _ textField: UITextField,
+            shouldChangeCharactersIn range: NSRange,
+            replacementString string: String
+        ) -> Bool {
             if let text = textField.text {
+                BSLogger.debug(text)
                 parent.text = text
+                parent.shouldChangeCharacterSubject.send(text)
             } else {
+                BSLogger.debug("empty")
                 parent.text = ""
+                parent.shouldChangeCharacterSubject.send("")
             }
             
-            parent.shouldChangeCharacterSubject.send()
             return true
         }
     }
