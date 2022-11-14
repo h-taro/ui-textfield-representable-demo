@@ -56,6 +56,7 @@ struct UITextFieldRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UITextField, context: Context) {
+        BSLogger.debug("update ui view")
         uiView.text = text
         uiView.isSecureTextEntry = isSecure
     }
@@ -129,7 +130,10 @@ struct UITextFieldRepresentable: UIViewRepresentable {
          指定されたテキストを変更するかどうかデリゲートに尋ねます。
          */
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            BSLogger.debug("テキストが編集される度")
+            if let text = textField.text {
+                BSLogger.debug("テキストが編集される度")
+                parent.text = text
+            }
             return true
         }
     }

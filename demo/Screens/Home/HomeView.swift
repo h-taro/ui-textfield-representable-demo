@@ -12,13 +12,6 @@ struct HomeView: View {
     
     var body: some View {
         contentView
-            .alert(
-                isPresented: $viewModel.isPresented) {
-                    .init(
-                        title: .init("email: \(viewModel.email)"),
-                        message: .init("password: \(viewModel.password)")
-                    )
-                }
     }
     
     private var contentView: some View {
