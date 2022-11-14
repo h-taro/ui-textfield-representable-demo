@@ -5,14 +5,15 @@
 //  Created by 平石　太郎 on 2022/11/10.
 //
 
+import BSLogger
 import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
-    @Published var isPresented = false
     
     func onTapDone() {
-        isPresented = true
+        BSLogger.debug("email: \(email)")
+        BSLogger.debug("password: \(password)")
     }
 }
