@@ -10,16 +10,19 @@ import SwiftUI
 
 struct UITextFieldRepresentable: UIViewRepresentable {
     @Binding var text: String
+    @Binding var isSecure: Bool
     
     private let placeholder: String
     private let keyboardType: UIKeyboardType
     
     init(
         text: Binding<String>,
+        isSecure: Binding<Bool>,
         placeholder: String,
         keyboardType: UIKeyboardType
     ) {
         self._text = text
+        self._isSecure = isSecure
         self.placeholder = placeholder
         self.keyboardType = keyboardType
     }
@@ -54,6 +57,7 @@ struct UITextFieldRepresentable: UIViewRepresentable {
     
     func updateUIView(_ uiView: UITextField, context: Context) {
         uiView.text = text
+        uiView.isSecureTextEntry = isSecure
     }
     
     class Coordinator: NSObject, UITextFieldDelegate {

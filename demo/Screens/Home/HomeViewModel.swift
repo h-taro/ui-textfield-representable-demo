@@ -8,7 +8,11 @@
 import Combine
 
 class HomeViewModel: ObservableObject {
-    @Published var text1 = "first"
-    @Published var text2 = "second"
-    @Published var text3 = "third"
+    @Published var email = ""
+    @Published var password = ""
+    @Published var isPresented = false
+    
+    func onTapDone() {
+        isPresented = true
+    }
 }

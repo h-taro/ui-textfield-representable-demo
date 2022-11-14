@@ -12,15 +12,39 @@ struct HomeView: View {
     
     var body: some View {
         contentView
+            .alert(
+                isPresented: $viewModel.isPresented) {
+                    .init(
+                        title: .init("email: \(viewModel.email)"),
+                        message: .init("password: \(viewModel.password)")
+                    )
+                }
     }
     
     private var contentView: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .leading, spacing: .zero) {
+            VStack(alignment: .leading, spacing: 16) {
                 EmailTextField(
-                    text: $viewModel.text1,
+                    text: $viewModel.email,
                     placeholder: "mail@example.com"
                 )
+                
+                PasswordTextField(
+                    password: $viewModel.password,
+                    placeholder: "パスワードを入力してください"
+                )
+                
+                Button(action: viewModel.onTapDone) {
+                    Text("DONE")
+                        .font(.body)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(Color.blue.opacity(0.8))
+                        )
+                }
             }
             .padding()
         }

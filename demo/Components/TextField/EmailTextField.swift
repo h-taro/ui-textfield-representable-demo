@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: フォーカス時にスタイルを変更する
 struct EmailTextField: View {
     private var text: Binding<String>
     private let placeholder: String
@@ -22,6 +23,7 @@ struct EmailTextField: View {
     var body: some View {
         UITextFieldRepresentable(
             text: text,
+            isSecure: .constant(false),
             placeholder: placeholder,
             keyboardType: .emailAddress
         )

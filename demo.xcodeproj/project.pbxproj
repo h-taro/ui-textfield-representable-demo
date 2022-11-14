@@ -10,6 +10,7 @@
 		7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */; };
 		7678DF64291E511000D10CC6 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF63291E511000D10CC6 /* EmailTextField.swift */; };
 		7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF66291E522300D10CC6 /* UIApplication+.swift */; };
+		7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */; };
 		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
 		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
 		768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 768CC61B291C6FCE00C98183 /* BSLogger */; };
@@ -23,6 +24,7 @@
 		7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldRepresentable.swift; sourceTree = "<group>"; };
 		7678DF63291E511000D10CC6 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		7678DF66291E522300D10CC6 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		768CC613291BFC4E00C98183 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		768CC615291BFC5500C98183 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		76C8A09D291BFBA2005AC48A /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 			children = (
 				7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */,
 				7678DF63291E511000D10CC6 /* EmailTextField.swift */,
+				7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */,
 				7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */,
 				7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */,
+				7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */,
 				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
