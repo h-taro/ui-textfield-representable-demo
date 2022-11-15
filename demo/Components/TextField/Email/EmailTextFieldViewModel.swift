@@ -33,6 +33,8 @@ extension EmailTextFieldViewModel {
         shouldChangeCharacterSubject
             .receive(on: DispatchQueue.main)
             .sink { [weak self] text in
+                BSLogger.debug(text)
+
                 guard let self = self else { return }
                 
                 do {

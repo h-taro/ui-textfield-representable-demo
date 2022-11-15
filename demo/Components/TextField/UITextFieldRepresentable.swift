@@ -61,8 +61,8 @@ struct UITextFieldRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UITextField, context: Context) {
-        uiView.text = text
-        uiView.isSecureTextEntry = isSecure
+//        uiView.text = text
+//        uiView.isSecureTextEntry = isSecure
     }
     
     class Coordinator: NSObject, UITextFieldDelegate {
@@ -139,11 +139,9 @@ struct UITextFieldRepresentable: UIViewRepresentable {
             replacementString string: String
         ) -> Bool {
             if let text = textField.text {
-                BSLogger.debug(text)
                 parent.text = text
                 parent.shouldChangeCharacterSubject.send(text)
             } else {
-                BSLogger.debug("empty")
                 parent.text = ""
                 parent.shouldChangeCharacterSubject.send("")
             }

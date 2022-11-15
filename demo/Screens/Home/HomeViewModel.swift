@@ -15,6 +15,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
+    @Published var hoge = ""
     @Published private(set) var isShowErrorView = false
     
     private(set) var emailValidSubject: PassthroughSubject<Bool, Never> = .init()
@@ -22,6 +23,7 @@ class HomeViewModel: ObservableObject {
     
     init() {
         subscribeEmailValid()
+        subscribeHoge()
     }
     
     deinit {
@@ -34,6 +36,16 @@ class HomeViewModel: ObservableObject {
 
 // MARK: - PRIVATE METHODS
 extension HomeViewModel {
+    private func subscribeHoge() {
+        $hoge
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] output in
+                guard let self = self else { return }
+                BSLogger.debug(output)
+            }
+            .store(in: &cancellables)
+    }
+
     private func subscribeEmailValid() {
         emailValidSubject
             .receive(on: DispatchQueue.main)

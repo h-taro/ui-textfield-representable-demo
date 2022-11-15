@@ -24,6 +24,8 @@ struct HomeView: View {
                     placeholder: "パスワードを入力してください"
                 )
                 
+                HogeTextField(hoge: $viewModel.hoge)
+                
                 Button(action: viewModel.onTapDone) {
                     Text("DONE")
                         .font(.body)

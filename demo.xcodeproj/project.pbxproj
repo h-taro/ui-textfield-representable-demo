@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7601628829230D570036ED09 /* HogeTextFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601628729230D570036ED09 /* HogeTextFieldRepresentable.swift */; };
+		7601628B292311190036ED09 /* HogeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601628A292311190036ED09 /* HogeTextField.swift */; };
 		76260B042921ED91004EBEA1 /* EmailTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76260B032921ED91004EBEA1 /* EmailTextFieldViewModel.swift */; };
 		7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */; };
 		7678DF64291E511000D10CC6 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF63291E511000D10CC6 /* EmailTextField.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7601628729230D570036ED09 /* HogeTextFieldRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeTextFieldRepresentable.swift; sourceTree = "<group>"; };
+		7601628A292311190036ED09 /* HogeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeTextField.swift; sourceTree = "<group>"; };
 		76260B032921ED91004EBEA1 /* EmailTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldViewModel.swift; sourceTree = "<group>"; };
 		7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldRepresentable.swift; sourceTree = "<group>"; };
 		7678DF63291E511000D10CC6 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -48,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760162892923110E0036ED09 /* Hoge */ = {
+			isa = PBXGroup;
+			children = (
+				7601628A292311190036ED09 /* HogeTextField.swift */,
+			);
+			path = Hoge;
+			sourceTree = "<group>";
+		};
 		76260B012921ED6A004EBEA1 /* Email */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +80,11 @@
 		7678DF62291E50F600D10CC6 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				760162892923110E0036ED09 /* Hoge */,
 				76260B022921ED74004EBEA1 /* Password */,
 				76260B012921ED6A004EBEA1 /* Email */,
 				7678DF60291E4F3D00D10CC6 /* UITextFieldRepresentable.swift */,
+				7601628729230D570036ED09 /* HogeTextFieldRepresentable.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -234,10 +248,12 @@
 				768CC614291BFC4E00C98183 /* HomeView.swift in Sources */,
 				76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */,
 				76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */,
+				7601628829230D570036ED09 /* HogeTextFieldRepresentable.swift in Sources */,
 				7678DF67291E522300D10CC6 /* UIApplication+.swift in Sources */,
 				7678DF61291E4F3D00D10CC6 /* UITextFieldRepresentable.swift in Sources */,
 				7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */,
 				768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */,
+				7601628B292311190036ED09 /* HogeTextField.swift in Sources */,
 				76260B042921ED91004EBEA1 /* EmailTextFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
