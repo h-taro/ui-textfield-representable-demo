@@ -17,15 +17,49 @@ struct HomeView: View {
     private var contentView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: 16) {
-                EmailTextField(
-                    text: $viewModel.email,
-                    placeholder: "mail@example.com"
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: .zero,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
                 )
                 
-                PasswordTextField(
-                    password: $viewModel.password,
-                    placeholder: "パスワードを入力してください"
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: 1,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
                 )
+                
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: 2,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
+                )
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 0,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
+                
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 1,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
+                
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 2,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
                 
                 Button(action: viewModel.onTapDone) {
                     Text("DONE")
@@ -40,6 +74,27 @@ struct HomeView: View {
                 }
             }
             .padding()
+        }
+    }
+    
+    private var emailTextField: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            EmailTextField(
+                text: $viewModel.email,
+                placeholder: "mail@example.com",
+                emailValidSubject: viewModel.emailValidSubject
+            )
+            
+            if viewModel.isShowErrorView {
+                HStack(alignment: .center, spacing: 4) {
+                    Image(systemName: "exclamationmark.circle")
+                    
+                    Text("エラーメッセージエラーメッセージエラーメッセージ")
+                        .font(.caption)
+                        .fontWeight(.regular)
+                }
+                .foregroundColor(.red.opacity(0.8))
+            }
         }
     }
 }
