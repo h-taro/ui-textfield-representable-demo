@@ -16,14 +16,17 @@ class HomeViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var hoge = ""
+    @Published var focusTag: Int? = nil
     @Published private(set) var isShowErrorView = false
     
     private(set) var emailValidSubject: PassthroughSubject<Bool, Never> = .init()
+    private(set) var shouldReturnSubject: PassthroughSubject<Void, Never> = .init()
     private var cancellables: Set<AnyCancellable> = []
     
     init() {
         subscribeEmailValid()
         subscribeHoge()
+        subscribeShouldReturn()
     }
     
     deinit {
@@ -36,6 +39,25 @@ class HomeViewModel: ObservableObject {
 
 // MARK: - PRIVATE METHODS
 extension HomeViewModel {
+    private func subscribeShouldReturn() {
+        shouldReturnSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                
+                if self.focusTag == nil {
+                    self.focusTag = .zero
+                } else if self.focusTag == .zero {
+                    self.focusTag = 1
+                } else if self.focusTag == 1 {
+                    self.focusTag = 2
+                } else {
+                    self.focusTag = .zero
+                }
+            }
+            .store(in: &cancellables)
+    }
+
     private func subscribeHoge() {
         $hoge
             .receive(on: DispatchQueue.main)

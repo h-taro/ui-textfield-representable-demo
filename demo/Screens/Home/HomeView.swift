@@ -17,14 +17,49 @@ struct HomeView: View {
     private var contentView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: 16) {
-                emailTextField
-                
-                PasswordTextField(
-                    password: $viewModel.password,
-                    placeholder: "パスワードを入力してください"
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: .zero,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
                 )
                 
-                HogeTextField(hoge: $viewModel.hoge)
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: 1,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
+                )
+                
+                FugaTextField(
+                    text: .constant(""),
+                    focusTag: $viewModel.focusTag,
+                    tag: 2,
+                    placeholder: "FUGA",
+                    shouldReturnSubject: viewModel.shouldReturnSubject
+                )
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 0,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
+                
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 1,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
+                
+                //                FugaTextField(
+                //                    text: .constant(""),
+                //                    placeholder: "FUGA",
+                //                    tag: 2,
+                //                    shouldReturnSubject: viewModel.shouldReturnSubject
+                //                )
                 
                 Button(action: viewModel.onTapDone) {
                     Text("DONE")
