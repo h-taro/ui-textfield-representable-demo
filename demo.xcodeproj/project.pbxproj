@@ -18,7 +18,6 @@
 		7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */; };
 		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
 		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
-		768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 768CC61B291C6FCE00C98183 /* BSLogger */; };
 		76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A0291BFBA2005AC48A /* demoApp.swift */; };
 		76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A2291BFBA2005AC48A /* ContentView.swift */; };
 		76C8A0A5291BFBA6005AC48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C8A0A4291BFBA6005AC48A /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768CC61C291C6FCE00C98183 /* BSLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +197,6 @@
 			);
 			name = demo;
 			packageProductDependencies = (
-				768CC61B291C6FCE00C98183 /* BSLogger */,
 			);
 			productName = demo;
 			productReference = 76C8A09D291BFBA2005AC48A /* demo.app */;
@@ -230,7 +227,6 @@
 			);
 			mainGroup = 76C8A094291BFBA2005AC48A;
 			packageReferences = (
-				768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */,
 			);
 			productRefGroup = 76C8A09E291BFBA2005AC48A /* Products */;
 			projectDirPath = "";
@@ -477,25 +473,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.com/bs-libraries/bs_logger";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		768CC61B291C6FCE00C98183 /* BSLogger */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 768CC61A291C6FCE00C98183 /* XCRemoteSwiftPackageReference "bs_logger" */;
-			productName = BSLogger;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76C8A095291BFBA2005AC48A /* Project object */;
 }
