@@ -18,6 +18,7 @@
 		7678DF69291E5AC900D10CC6 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678DF68291E5AC900D10CC6 /* PasswordTextField.swift */; };
 		768CC614291BFC4E00C98183 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC613291BFC4E00C98183 /* HomeView.swift */; };
 		768CC616291BFC5500C98183 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CC615291BFC5500C98183 /* HomeViewModel.swift */; };
+		769C9EEA2956F129009BFAA1 /* THLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 769C9EE92956F129009BFAA1 /* THLogger */; };
 		76C8A0A1291BFBA2005AC48A /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A0291BFBA2005AC48A /* demoApp.swift */; };
 		76C8A0A3291BFBA2005AC48A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8A0A2291BFBA2005AC48A /* ContentView.swift */; };
 		76C8A0A5291BFBA6005AC48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C8A0A4291BFBA6005AC48A /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769C9EEA2956F129009BFAA1 /* THLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +199,7 @@
 			);
 			name = demo;
 			packageProductDependencies = (
+				769C9EE92956F129009BFAA1 /* THLogger */,
 			);
 			productName = demo;
 			productReference = 76C8A09D291BFBA2005AC48A /* demo.app */;
@@ -227,6 +230,7 @@
 			);
 			mainGroup = 76C8A094291BFBA2005AC48A;
 			packageReferences = (
+				769C9EE82956F129009BFAA1 /* XCRemoteSwiftPackageReference "THLogger" */,
 			);
 			productRefGroup = 76C8A09E291BFBA2005AC48A /* Products */;
 			projectDirPath = "";
@@ -473,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		769C9EE82956F129009BFAA1 /* XCRemoteSwiftPackageReference "THLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/h-taro/THLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		769C9EE92956F129009BFAA1 /* THLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 769C9EE82956F129009BFAA1 /* XCRemoteSwiftPackageReference "THLogger" */;
+			productName = THLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76C8A095291BFBA2005AC48A /* Project object */;
 }
