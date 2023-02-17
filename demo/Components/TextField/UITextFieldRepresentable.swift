@@ -6,7 +6,7 @@
 //
 
 import Combine
-import BSLogger
+import THLogger
 import SwiftUI
 
 struct UITextFieldRepresentable: UIViewRepresentable {
@@ -80,7 +80,7 @@ struct UITextFieldRepresentable: UIViewRepresentable {
          指定されたテキスト フィールドで編集を開始するかどうかをデリゲートに尋ねます。
          */
         func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-            BSLogger.debug("入力可能になる直前")
+            THLogger.debug("入力可能になる直前")
             return true
         }
         
@@ -89,14 +89,14 @@ struct UITextFieldRepresentable: UIViewRepresentable {
          
          */
         func textFieldDidBeginEditing(_ textField: UITextField) {
-            BSLogger.debug("入力可能になった後")
+            THLogger.debug("入力可能になった後")
         }
         
         /**
          指定されたテキスト フィールドでの編集を停止するかどうかをデリゲートに尋ねます。
          */
         func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-            BSLogger.debug("キーボードが閉じる直前")
+            THLogger.debug("キーボードが閉じる直前")
             return true
         }
         
@@ -104,21 +104,21 @@ struct UITextFieldRepresentable: UIViewRepresentable {
          指定されたテキスト フィールドの編集がいつ停止したか、および停止した理由をデリゲートに通知します。
          */
         func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-            BSLogger.debug(reason)
+            THLogger.debug(reason)
         }
         
         /**
          指定されたテキスト フィールドの編集が停止したときにデリゲートに通知します。
          */
         func textFieldDidEndEditing(_ textField: UITextField) {
-            BSLogger.debug("キーボードが閉じた後")
+            THLogger.debug("キーボードが閉じた後")
         }
         
         /**
          テキスト フィールドの現在の内容を削除するかどうかをデリゲートに尋ねます。
          */
         func textFieldShouldClear(_ textField: UITextField) -> Bool {
-            BSLogger.debug("テキストがクリアされる直前")
+            THLogger.debug("テキストがクリアされる直前")
             return true
         }
         
@@ -126,7 +126,7 @@ struct UITextFieldRepresentable: UIViewRepresentable {
          テキスト フィールドの [戻る] ボタンの押下を処理するかどうかをデリゲートに問い合わせます。
          */
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            BSLogger.debug("Returnが押される直前")
+            THLogger.debug("Returnが押される直前")
             return true
         }
         

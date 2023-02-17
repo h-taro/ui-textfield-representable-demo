@@ -5,7 +5,7 @@
 //  Created by 平石　太郎 on 2022/11/14.
 //
 
-import BSLogger
+import THLogger
 import Foundation
 import Combine
 
@@ -33,7 +33,7 @@ extension EmailTextFieldViewModel {
         shouldChangeCharacterSubject
             .receive(on: DispatchQueue.main)
             .sink { [weak self] text in
-                BSLogger.debug(text)
+                THLogger.debug(text)
 
                 guard let self = self else { return }
                 
@@ -44,7 +44,7 @@ extension EmailTextFieldViewModel {
                         self.emailValidSubject.send(false)
                     }
                 } catch {
-                    BSLogger.error(error)
+                    THLogger.error(error)
                 }
             }
             .store(in: &cancellables)

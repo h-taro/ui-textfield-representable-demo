@@ -5,7 +5,7 @@
 //  Created by 平石　太郎 on 2022/11/16.
 //
 
-import BSLogger
+import THLogger
 import Combine
 import SwiftUI
 
@@ -61,7 +61,7 @@ struct FugaTextFieldRepresentable: UIViewRepresentable {
         guard let focusTag = focusTag else { return }
         if uiView.tag == focusTag {
             
-            BSLogger.debug(focusTag)
+            THLogger.debug(focusTag)
             uiView.becomeFirstResponder()
         }
     }

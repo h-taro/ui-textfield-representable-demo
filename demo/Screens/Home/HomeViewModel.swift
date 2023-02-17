@@ -9,7 +9,7 @@
  
  */
 import Foundation
-import BSLogger
+import THLogger
 import Combine
 
 class HomeViewModel: ObservableObject {
@@ -63,7 +63,7 @@ extension HomeViewModel {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] output in
                 guard let self = self else { return }
-                BSLogger.debug(output)
+                THLogger.debug(output)
             }
             .store(in: &cancellables)
     }
